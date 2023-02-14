@@ -1,1 +1,6 @@
-In Java, a thread is a separate path of execution within a program. It allows concurrent and parallel execution of different parts of a program. Threads can be created either by extending the Thread class or implementing the Runnable interface. The Thread class provides methods to control the execution of a thread, such as starting, pausing, resuming, and stopping the thread. Synchronization mechanisms, such as locks and semaphores, are used to coordinate the access to shared resources among threads.
+In Java, a thread is a separate path of execution within a program. 
+It allows concurrent and parallel execution of different parts of a program.
+Threads can be created either by extending the Thread class or implementing the Runnable interface.
+The Thread class provides methods to control the execution of a thread, such as starting, pausing, resuming, 
+and stopping the thread.
+Synchronization mechanisms, such as locks and semaphores, are used to coordinate the access to shared resources among threads.
