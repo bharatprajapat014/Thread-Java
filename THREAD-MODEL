@@ -1,0 +1,38 @@
+    +---+
+    |NEW|
+    +---+
+      |
+      |
+  +---------+    SLEEP DONE ,I/O , COMPLETE,LOCK AVAILABLE , RESUME ,NOTIFY         
+  | RUNABLE | --------------  _____________
+  +---------+              | |NON RUNNABLE |
+      |                    --|  (blOCKED)  |
+      |                    | |_____________|
+  +---------+              |
+  | RUNNING |--------------|
+  +---------+  SLEEP,BLOCK ON I/O,WAIT FOR LOCK,SUSPEND,WAIT
+ RUN()  |
+ METHOD |
+ EXITS  |
+  +------------+
+  | TERMINATED |
+  +------------+
+  1) New (Ready to run)
+
+A thread is in New when it gets CPU time.
+
+2) Running
+
+A thread is in a Running state when it is under execution.
+
+3) Suspended
+
+A thread is in the Suspended state when it is temporarily inactive or under execution.
+
+4) Blocked
+
+A thread is in the Blocked state when it is waiting for resources.
+
+5) Terminated
+
+A thread comes in this state when at any given time, it halts its execution immediately.
