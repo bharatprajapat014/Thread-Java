@@ -1,0 +1,34 @@
+In Java, you can create a thread by implementing the Runnable interface. The Runnable interface defines a single method,
+run(), which contains the code to be executed in the new thread. To create a new thread using the Runnable interface, 
+you need to follow these steps:
+
+Create a class that implements the Runnable interface.
+Override the run() method and add the code that you want to execute in the new thread.
+Create a new Thread object and pass an instance of your Runnable class to the constructor.
+Call the start() method on the new Thread object to start the new thread.
+Here's an example of how to create a new thread using the Runnable interface:
+public class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("New thread running");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyRunnable r = new MyRunnable();
+        Thread t = new Thread(r);
+        t.start(); // Start the new thread
+        System.out.println("Main thread running");
+    }
+}
+In this example, we define a class MyRunnable that implements the Runnable interface and overrides its run() method. 
+In the Main class, we create a new instance of MyRunnable and pass it to the constructor of a new Thread object. 
+We then call the start() method on the new Thread object to start the new thread, allowing the main thread to continue executing
+the rest of the code.
+
+When you run this program, you should see the following output:
+     
+              ------------------------
+ -------------|  Main thread running |--------------
+ -------------| New thread running   |--------------
+              ------------------------
