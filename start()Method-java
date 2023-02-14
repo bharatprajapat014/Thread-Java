@@ -1,0 +1,24 @@
+In Java, the start() method is a method of the Thread class, which is used to start a new thread of execution.
+When you call the start() method on a Thread object, it creates a new thread and executes the code in the run() method of that
+thread in parallel with the main thread.
+It's important to note that you should not call the run() method directly to start a new thread. If you do, the code will execute in the same thread as the calling code and will not be concurrent.
+Instead,
+you should always call the start() method to start a new thread.
+Here's an example of how to use the start() method:
+
+public class MyThread extends Thread {
+    public void run() {
+        System.out.println("New thread running");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread t = new MyThread();
+        t.start(); // Start the new thread
+        System.out.println("Main thread running");
+    }
+}
+In this example, we define a class MyThread that extends the Thread class and overrides its run() method. 
+In the Main class, we create a new instance of MyThread and start it by calling its start() method. 
+This will execute the run() method in a new thread, allowing the main thread to continue executing the rest of the code.
